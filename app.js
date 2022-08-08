@@ -11,9 +11,9 @@ const app = express();
 // app.set('views', 'views');
 
 //Using handlebars engine
-app.engine('hbs', engine());
-app.set('view engine', 'hbs');
-app.set('views', 'views');
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');

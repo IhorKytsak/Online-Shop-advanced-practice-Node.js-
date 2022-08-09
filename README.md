@@ -7,7 +7,7 @@
      - express-handlebars
    2. nodemon (automatically restarting the node application)
 
-
+## MVC (Model View Controller) pattern for structuring code
 ## Node.js 
 
 ## Express framework

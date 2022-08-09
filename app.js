@@ -2,7 +2,7 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const { engine } = require('express-handlebars');
+// const { engine } = require('express-handlebars');
 
 const app = express();
 
@@ -11,9 +11,13 @@ const app = express();
 // app.set('views', 'views');
 
 //Using handlebars engine
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-app.set('views', './views');
+// app.engine('handlebars', engine());
+// app.set('view engine', 'handlebars');
+// app.set('views', 'views');
+
+//Using ejs engine
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');

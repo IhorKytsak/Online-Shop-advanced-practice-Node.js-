@@ -8,6 +8,8 @@
    2. nodemon (automatically restarting the node application)
 
 ## MVC (Model View Controller) pattern for structuring code
+
+## Dynamic Routes
 ## Node.js 
 
 ## Express framework

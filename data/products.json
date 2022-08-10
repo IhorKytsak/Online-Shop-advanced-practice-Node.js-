@@ -1,1 +1,9 @@
-[{"title":"Book777","imageUrl":"https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png","description":"A simple book.","price":"13.99"},{"title":"111","imageUrl":"https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png","description":"eeeeee eeeeeeee eeeeeeee eeeeee eeeeeeeee","price":"333"},{"title":"eeee","imageUrl":"https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png","description":"22 3  44  3 2","price":"332"}]
+[
+  {
+    "id": "12345",
+    "title": "Book777",
+    "imageUrl": "https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png",
+    "description": "A simple book.",
+    "price": "13.99"
+  }
+]

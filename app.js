@@ -2,22 +2,12 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
-// const { engine } = require('express-handlebars');
 
 const errorController = require('./controllers/error');
+const sequelize = require('./util/database');
 
 const app = express();
 
-// Using pug engine
-// app.set('view engine', 'pug');
-// app.set('views', 'views');
-
-//Using handlebars engine
-// app.engine('handlebars', engine());
-// app.set('view engine', 'handlebars');
-// app.set('views', 'views');
-
-//Using ejs engine
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -32,4 +22,12 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(3000);
+sequelize
+  .sync()
+  .then((result) => {
+    // console.log(result);
+    app.listen(3000);
+  })
+  .catch((err) => {
+    console.log(err);
+  });

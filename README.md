@@ -13,3 +13,4 @@
 
 * ## SQL 
   * MySQL (relational database)
+  * Sequelize (promise-based Node.js ORM tool)

@@ -12,5 +12,8 @@
 * ## MVC (Model View Controller) pattern for structuring code
 
 * ## SQL 
-  * MySQL (relational database)
+  * MySQL
   * Sequelize (promise-based Node.js ORM tool)
+
+* ## NoSQL 
+  * MongoDB 

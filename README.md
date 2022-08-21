@@ -13,7 +13,8 @@
 
 * ## SQL 
   * MySQL
-  * Sequelize (promise-based Node.js ORM tool)
+  * Sequelize (promise-based Node.js ORM library)
 
 * ## NoSQL 
   * MongoDB 
+  * Mongoose ( ODM library)

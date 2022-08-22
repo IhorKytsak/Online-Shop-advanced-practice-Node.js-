@@ -18,3 +18,7 @@
 * ## NoSQL 
   * MongoDB 
   * Mongoose ( ODM library)
+
+* ## Cookies & Sessions
+  * express-session
+  * connect-mongodb-session

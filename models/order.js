@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const orderScema = new Schema({
+const orderSchema = new Schema({
   products: [
     {
       product: { type: Object, required: true },
@@ -10,7 +10,7 @@ const orderScema = new Schema({
     },
   ],
   user: {
-    name: {
+    email: {
       type: String,
       required: true,
     },
@@ -22,4 +22,4 @@ const orderScema = new Schema({
   },
 });
 
-module.exports = mongoose.model('Order', orderScema);
+module.exports = mongoose.model('Order', orderSchema);

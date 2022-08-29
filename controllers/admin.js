@@ -5,17 +5,14 @@ exports.getAddProduct = (req, res, next) => {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
     editing: false,
-    isAuthenticated: req.session.isLoggedIn,
-
   });
 };
 
 exports.postAddProduct = (req, res, next) => {
   const title = req.body.title;
+  const imageUrl = req.body.imageUrl;
   const price = req.body.price;
   const description = req.body.description;
-  const imageUrl = req.body.imageUrl;
-
   const product = new Product({
     title: title,
     price: price,
@@ -23,7 +20,6 @@ exports.postAddProduct = (req, res, next) => {
     imageUrl: imageUrl,
     userId: req.user,
   });
-
   product
     .save()
     .then((result) => {
@@ -50,12 +46,9 @@ exports.getEditProduct = (req, res, next) => {
         path: '/admin/edit-product',
         editing: editMode,
         product: product,
-        isAuthenticated: req.session.isLoggedIn,
       });
     })
-    .catch((err) => {
-      console.log(err);
-    });
+    .catch((err) => console.log(err));
 };
 
 exports.postEditProduct = (req, res, next) => {
@@ -71,15 +64,12 @@ exports.postEditProduct = (req, res, next) => {
       product.price = updatedPrice;
       product.description = updatedDesc;
       product.imageUrl = updatedImageUrl;
-
       return product.save();
     })
     .then((result) => {
       res.redirect('/admin/products');
     })
-    .catch((err) => {
-      console.log(err);
-    });
+    .catch((err) => console.log(err));
 };
 
 exports.getProducts = (req, res, next) => {
@@ -89,22 +79,16 @@ exports.getProducts = (req, res, next) => {
         prods: products,
         pageTitle: 'Admin Products',
         path: '/admin/products',
-        isAuthenticated: req.session.isLoggedIn,
       });
     })
-    .catch((err) => {
-      console.log(err);
-    });
+    .catch((err) => console.log(err));
 };
 
 exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
-
   Product.findByIdAndRemove(prodId)
-    .then((result) => {
+    .then(() => {
       res.redirect('/admin/products');
     })
-    .catch((err) => {
-      console.log(err);
-    });
+    .catch((err) => console.log(err));
 };

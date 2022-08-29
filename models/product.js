@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const productScema = new Schema({
+const productSchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -21,9 +21,9 @@ const productScema = new Schema({
   },
   userId: {
     type: Schema.Types.ObjectId,
-    ref:'User',
+    ref: 'User',
     required: true,
   },
 });
 
-module.exports = mongoose.model('Product', productScema);
+module.exports = mongoose.model('Product', productSchema);

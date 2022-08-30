@@ -22,3 +22,11 @@
 * ## Cookies & Sessions
   * express-session
   * connect-mongodb-session
+
+* ## Authentication
+  * bcryptjs
+  * csurf (protection middleware)
+  
+* ## Sending Emails
+  * nodemailer (EmailEngine)
+  

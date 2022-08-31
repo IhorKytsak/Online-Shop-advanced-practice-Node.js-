@@ -30,3 +30,5 @@
 * ## Sending Emails
   * nodemailer (EmailEngine)
   
+* ## Validation
+  * express-validator

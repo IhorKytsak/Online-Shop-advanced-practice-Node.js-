@@ -32,3 +32,5 @@
   
 * ## Validation
   * express-validator
+
+* ##  Error Handling

@@ -41,3 +41,5 @@
 
 * ## Adding Pagination
 
+* ## Adding Payments
+  * stripe (payments API)
